@@ -24,25 +24,33 @@ import lombok.Setter;
 @Getter
 @EqualsAndHashCode
 @RequiredArgsConstructor
-@Entity
+@Entity(name="fit_board")
 public class Board {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence")
 	@SequenceGenerator(name = "id_Sequence", sequenceName = "ID_SEQ")
+	@Column(name="idx")
 	private int num; // 게시물 번호
 	private String title; // 게시물 제목
+	@Column(name="nickname")
 	private String writer; // 작성자
+	@Column(name="contents")
 	private String content; // 내용
 	private String price; // 가격
 //	private String fileName; // 이미지업로드용 
 //	private String originalFileName;
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="regidate")
 	private Date regdate;
+	@Column(name="hits")
 	private Long hitcount; // 조회수
 	private Long replycount; // 좋아요
 	private Long commentcount;
+	@Column(name="likes")
+	private int likecount; // ?
+	private String b_flag; // ?
 
 	
 	@ManyToOne(optional = true)
@@ -69,7 +77,7 @@ public class Board {
 	@PrePersist
 	public void prePersist() {
 		this.hitcount = this.hitcount == null ? 0 : this.hitcount;
-		this.replycount = this.replycount == null ? 0 : this.replycount;
+//		this.replycount = this.replycount == null ? 0 : this.replycount;
 	}
 
 
