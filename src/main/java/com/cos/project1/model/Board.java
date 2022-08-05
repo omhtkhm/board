@@ -37,7 +37,7 @@ public class Board {
 	private String writer; // 작성자
 	@Column(name="contents")
 	private String content; // 내용
-	private String price; // 가격
+//	private String price; // 가격
 //	private String fileName; // 이미지업로드용 
 //	private String originalFileName;
 	@CreationTimestamp
@@ -46,10 +46,9 @@ public class Board {
 	private Date regdate;
 	@Column(name="hits")
 	private Long hitcount; // 조회수
-	private Long replycount; // 좋아요
-	private Long commentcount;
 	@Column(name="likes")
-	private int likecount; // ?
+	private Long replycount; // 좋아요
+//	private Long commentcount;
 	private String b_flag; // ?
 
 	
@@ -77,7 +76,7 @@ public class Board {
 	@PrePersist
 	public void prePersist() {
 		this.hitcount = this.hitcount == null ? 0 : this.hitcount;
-//		this.replycount = this.replycount == null ? 0 : this.replycount;
+		this.replycount = this.replycount == null ? 0 : this.replycount;
 	}
 
 

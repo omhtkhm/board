@@ -26,10 +26,10 @@
 			class="form-control" readonly="readonly">${board.content }</textarea>
 	</div>
 
-	<div class="form-group">
-		<label for="price">가격:</label> <input type="text" class="form-control"
-			id="price" name="price" value="${board.price}" readonly="readonly">
-	</div>
+<%--	<div class="form-group">--%>
+<%--		<label for="price">가격:</label> <input type="text" class="form-control"--%>
+<%--			id="price" name="price" value="${board.price}" readonly="readonly">--%>
+<%--	</div>--%>
 
 
 	<div class="form-group">

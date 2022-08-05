@@ -25,11 +25,11 @@ public class CommentService {
 	public void insert(Comment comment) {
 		// Board commentCount 1증가하기
 		Optional<Board> board = boardRepository.findById(comment.getBoard().getNum());
-		Long commentCount = board.get().getCommentcount();
-		if (commentCount == null) {
-			commentCount = (long) 1;
-		}
-		board.get().setCommentcount(commentCount + 1);
+//		Long commentCount = board.get().getCommentcount();
+//		if (commentCount == null) {
+//			commentCount = (long) 1;
+//		}
+//		board.get().setCommentcount(commentCount + 1);
 		commentRepository.save(comment);
 	}
 

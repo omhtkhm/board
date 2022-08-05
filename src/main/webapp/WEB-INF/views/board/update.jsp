@@ -24,10 +24,10 @@
 			<textarea id="content" name="content" id="content"
 				class="form-control">${board.content }</textarea>
 		</div>
-		<div class="form-group">
-			<label for="price">가격:</label> <input type="text"
-				class="form-control" id="price" name="price" value="${board.price}">
-		</div>
+<%--		<div class="form-group">--%>
+<%--			<label for="price">가격:</label> <input type="text"--%>
+<%--				class="form-control" id="price" name="price" value="${board.price}">--%>
+<%--		</div>--%>
 			<br> <br>
 			<button type="button" id="btnModify" class="btn btn-primary  btn-sm">수정 완료</button>
 			<button type="button" id="btnDelete" class="btn btn-primary  btn-sm"

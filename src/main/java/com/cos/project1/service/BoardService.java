@@ -107,7 +107,7 @@ public class BoardService {
 		Board b = boardRepository.findById(board.getNum()).get();
 		b.setTitle(board.getTitle());
 		b.setContent(board.getContent());
-		b.setPrice(board.getPrice());
+//		b.setPrice(board.getPrice());
 //		boardRepository.save(b);
 	}
 

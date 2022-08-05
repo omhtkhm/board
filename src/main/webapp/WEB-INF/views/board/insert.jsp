@@ -18,10 +18,10 @@
 			<textarea id="content" name="content" id="content"
 				placeholder="내용을 입력하세요" class="form-control"></textarea>
 		</div>
-		<div class="form-group">
-			<label for="price">가격:</label> <input type="number"
-				class="form-control" id="price" placeholder="가격을 입력하세요" name="price">
-		</div>
+<%--		<div class="form-group">--%>
+<%--			<label for="price">가격:</label> <input type="number"--%>
+<%--				class="form-control" id="price" placeholder="가격을 입력하세요" name="price">--%>
+<%--		</div>--%>
 		<div class="form-group row mb-4">
 			<label class="col-form-label ">사진 업로드</label>
 			<div class="col-sm-12 col-md-7">
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-primary">상품등록</button>
+		<button type="submit" class="btn btn-primary">게시글등록</button>
 		<button type="button" class="btn btn-primary" onclick="location.href='/board/list'">돌아가기</button>
 	</form>
 </div>
